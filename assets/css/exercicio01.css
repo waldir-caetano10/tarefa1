@@ -1,0 +1,106 @@
+:root{
+    --container-width:1500px;
+    --container-height:715px;
+    --container-gap:18px;
+    --main-width:300px;
+
+}
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container{
+   
+    width: var(--container-width);
+    height: var(--container-height);
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: var(--container-gap);
+    animation-name: animation;
+    animation-duration: 3s;
+}
+
+.main-card{
+    
+    width: var(--main-width);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--container-gap);
+}
+
+.card-image img{
+    width: var(--main-width);
+    height: 350px;
+}
+small{
+    color: grey;
+}
+span{
+    color: #474646;
+}
+strong{
+    font-size: 27px;
+    font-family: 'Times New Roman', Times, serif;
+}
+button{
+    width: 100px;
+    height: 40px;
+    border: none;
+    display: flex;
+    justify-content: left;
+    background-color: white;
+}
+
+.card-image-car img{
+    width: var(--main-width);
+    height: 250px;
+}
+p{
+    font-size: 14px;
+}
+@media  screen and (max-width: 1400px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 3000px;
+        margin-top: 40px;
+        animation-name: anima-mobile;
+        animation-duration: 4s;
+        
+    }
+}
+@keyframes animation {
+    from{
+        transform: translateY(-1000px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+       
+    }
+}
+@keyframes anima-mobile {
+
+        from{
+            transform: translateY(-3000px);
+            opacity: 0;
+        }
+        to{
+            transform: translateY(0);
+            opacity: 1;
+           
+        }
+}
